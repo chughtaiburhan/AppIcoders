@@ -1,33 +1,35 @@
-import About from "./components/About" 
-import Awards from "./components/Awards"
-import ChooseUs from "./components/ChooseUs"
-import ClientSays from "./components/ClientSays"
-import ContactUs from "./components/ContactUs"
-import FoodDelivery from "./components/FoodDelivery"
-import Footer from "./components/Footer"
- import Hero from "./components/Hero" 
-import Industries from "./components/Industries"
-import Product from "./components/Product"
-import Services from "./components/Services"
-import Technologies from "./components/Technologies"
+import React, { Suspense } from 'react';
+ 
+const About = React.lazy(() => import("./components/About"));
+const Awards = React.lazy(() => import("./components/Awards"));
+const ChooseUs = React.lazy(() => import("./components/ChooseUs"));
+const ClientSays = React.lazy(() => import("./components/ClientSays"));
+const ContactUs = React.lazy(() => import("./components/ContactUs"));
+const FoodDelivery = React.lazy(() => import("./components/FoodDelivery"));
+const Footer = React.lazy(() => import("./components/Footer"));
+const Industries = React.lazy(() => import("./components/Industries"));
+const Product = React.lazy(() => import("./components/Product"));
+const Services = React.lazy(() => import("./components/Services"));
+const Technologies = React.lazy(() => import("./components/Technologies")); 
+import Hero from "./components/Hero";
 
 const App = () => {
-  return (
-    <>
-     <Hero/>
-     <About/>
-     <Services/>  
-     <FoodDelivery/>
-     <ChooseUs/>
-     <ClientSays/>
-     <Industries/>
-     <Technologies/>
-     <Product/> 
-     <Awards/>
-     <ContactUs/>
-     <Footer/>
-    </>
+  return ( 
+    <Suspense fallback={<div>Loading sections...</div>}>
+      <Hero/>
+      <About/>
+      <Services/> 
+      <FoodDelivery/>
+      <ChooseUs/>
+      <ClientSays/>
+      <Industries/>
+      <Technologies/>
+      <Product/> 
+      <Awards/>
+      <ContactUs/>
+      <Footer/>
+    </Suspense>
   )
 }
 
-export default App
+export default App;
