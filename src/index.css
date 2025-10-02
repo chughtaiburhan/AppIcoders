@@ -1,0 +1,19 @@
+@import "tailwindcss";
+  
+.polygon-shape-bottom { 
+  background-color: #e81626; 
+  position: relative; 
+  clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%);
+}
+
+.polygon-shape-top {
+  background-color: #e81626;
+  position: relative;
+  clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
+}
+html,body{
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
