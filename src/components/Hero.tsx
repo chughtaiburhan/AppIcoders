@@ -1,6 +1,6 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import PhoneImg from "../../public/Mobile-Mockup 1.svg";
-import VetorImage from "../../public/assets/Group 169.svg";
+import PhoneImg from "../assets/Mobile-Mockup 1.svg";
+import VetorImage from "../assets/Group 169.svg";
 import Button from './Button';
 import Navbar from './Navbar';
 

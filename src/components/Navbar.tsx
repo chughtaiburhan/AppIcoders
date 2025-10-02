@@ -1,7 +1,7 @@
 import React, { useState } from "react"; 
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import Logo from "../assets/Logo_Final_White_1.svg"
 interface NavItem {
   name: string;
   href: string;
@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
       <div className="max-w-screen-xl mx-auto flex items-center justify-between p-4">
         {/* Logo */}
         <a href="/" className="flex items-center space-x-3">
-          <img src="/Logo-Final-White 1.svg" alt="Logo" width={200} height={100} /> 
+          <img src={Logo} alt="Logo" width={200} height={100} /> 
         </a>
 
         {/* Desktop Menu */}

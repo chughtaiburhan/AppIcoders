@@ -1,6 +1,6 @@
 import { Twitter, Facebook, Linkedin, Phone, Mail, ChevronRight, Github, Dribbble } from 'lucide-react';
 
-
+import Logo from "../assets/Logo_Final_White_1.svg"
 // 1. Define Data Structures for dynamic rendering
 const aboutLinks = [
     { name: 'HOME', href: '#' },
@@ -58,7 +58,7 @@ const Footer = () => {
                     {/* Column 1: Logo & Contact Info */}
                     <div className="w-full md:w-auto mb-10 md:mb-0 md:flex-shrink-0 lg:w-1/4">
                         <div className="flex items-center mb-6 justify-center md:justify-start"> 
-                           <img src="/Logo-Final-White 1.svg" className='h-12 w-auto' alt="" />
+                           <img src={Logo} className='h-12 w-auto' alt="" />
                         </div>
 
                         {/* Contact Info */}

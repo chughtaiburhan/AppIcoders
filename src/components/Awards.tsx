@@ -1,54 +1,59 @@
+import awards1 from "../assets/award1.svg";
+import awards2 from "../assets/award2.svg";
+import awards3 from "../assets/award3.svg";
+import awards4 from "../assets/award4.svg";
 
- interface AwardsData {
-    id: number,
-    logoSrc: string,
-    logoAlt: string,
-    description: string,
-    isFeatured: boolean,
-    textBelow: string,
+interface AwardsData {
+  id: number;
+  logoSrc: string;
+  logoAlt: string;
+  description: string;
+  isFeatured: boolean;
+  textBelow: string;
 }
 
 const awardsData: AwardsData[] = [
-    {
-        id: 1,
-        logoSrc: "/assets/award1.svg", 
-        logoAlt: "ITFirms Award",
-        description: "Top Mobile App Development Company",
-        isFeatured: false,
-        textBelow: "2019",
-    },
-    {
-        id: 2,
-        logoSrc: "/assets/award2.svg", 
-        logoAlt: "Top Mobile App Developers 2020",
-        description: "Top Developers mentioned us in their top app development companies in the USA list.",
-        isFeatured: true, 
-        textBelow: "Top Mobile App Developers 2020",
-    },
-    {
-        id: 3,
-        logoSrc: "/assets/award3.svg", 
-        logoAlt: "Clutch React Native Developers",
-        description: "TOP REACT NATIVE DEVELOPERS",
-        isFeatured: false,
-        textBelow: "Alberta 2019",
-    },
-    {
-        id: 4,
-        logoSrc: "/assets/award4.svg", 
-        logoAlt: "Appfutura Top Mobile App",
-        description: "TOP MOBILE APP DEVELOPMENT COMPANIES",
-        isFeatured: false,
-        textBelow: "appfutura",
-    }, 
-    {
-        id: 5,
-        logoSrc: "/assets/award1.svg", 
-        logoAlt: "Extra Award 5",
-        description: "Excellence in Innovation",
-        isFeatured: false,
-        textBelow: "2021",
-    },
+  {
+    id: 1,
+    logoSrc: awards1,
+    logoAlt: "ITFirms Award",
+    description: "Top Mobile App Development Company",
+    isFeatured: false,
+    textBelow: "2019",
+  },
+  {
+    id: 2,
+    logoSrc: awards2,
+    logoAlt: "Top Mobile App Developers 2020",
+    description:
+      "Top Developers mentioned us in their top app development companies in the USA list.",
+    isFeatured: true,
+    textBelow: "Top Mobile App Developers 2020",
+  },
+  {
+    id: 3,
+    logoSrc: awards3,
+    logoAlt: "Clutch React Native Developers",
+    description: "TOP REACT NATIVE DEVELOPERS",
+    isFeatured: false,
+    textBelow: "Alberta 2019",
+  },
+  {
+    id: 4,
+    logoSrc: awards4,
+    logoAlt: "Appfutura Top Mobile App",
+    description: "TOP MOBILE APP DEVELOPMENT COMPANIES",
+    isFeatured: false,
+    textBelow: "appfutura",
+  },
+  {
+    id: 5,
+    logoSrc: awards4,
+    logoAlt: "Extra Award 5",
+    description: "Excellence in Innovation",
+    isFeatured: false,
+    textBelow: "2021",
+  },
 ];
 
 

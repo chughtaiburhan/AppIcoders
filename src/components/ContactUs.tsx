@@ -1,5 +1,5 @@
 import { Phone, Mail } from 'lucide-react'; // Import necessary icons from lucide-react
-import ContactImg from "../../public/contact.svg"
+import ContactImg from "../assets/contact.svg"
 import Button from './Button';
 const ContactUs = () => {
     return (

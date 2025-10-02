@@ -1,12 +1,11 @@
-import React, { useState, useRef } from 'react';
-// Assuming 'food-Img.svg' is your blurred background image
-import FoodBgImg from "../../public/food-Img.svg"; 
+import React, { useState, useRef } from 'react'; 
+import FoodBgImg from "../assets/food-Img.svg"; 
 // Assuming you have phone mockup images
-import PhoneMockup1 from "../../public/assets/phone1.svg"; 
-import PhoneMockup2 from "../../public/assets/phone1.svg"; // Changed one import to differentiate mockups
-import PhoneMockup3 from "../../public/assets/phone1.svg"; // Changed one import to differentiate mockups
-import AppstoreImg from "../../public/assets/appstore-Img.svg";
-import GoogleplayImg from "../../public/assets/GooglePlaystore-Img.svg";
+import PhoneMockup1 from "../assets/phone1.svg"; 
+import PhoneMockup2 from "../assets/phone1.svg"; // Changed one import to differentiate mockups
+import PhoneMockup3 from "../assets/phone1.svg"; // Changed one import to differentiate mockups
+import AppstoreImg from "../assets/appstore-Img.svg";
+import GoogleplayImg from "../assets/GooglePlaystore-Img.svg";
 import Button from './Button'; 
 import { ChevronUp, ChevronDown } from 'lucide-react';
 

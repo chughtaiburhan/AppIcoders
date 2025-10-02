@@ -1,5 +1,5 @@
-import MaskGroup from '../../public/assets/Mask group.svg';
-import ClientProfile from "../../public/assets/clientImg.svg";
+import MaskGroup from "../assets/Mask group.svg";
+import ClientProfile from "../assets/clientImg.svg";
 
 const ClientSays: React.FC = () => {
   return (

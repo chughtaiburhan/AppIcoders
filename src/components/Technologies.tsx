@@ -1,5 +1,5 @@
-import BgImg from "../../public/assets/TechBg.svg";
-import TechImg from "../../public/assets/techImg1.svg";
+import BgImg from "../assets/TechBg.svg";
+import TechImg from "../assets/techImg1.svg";
 
 const Technologies = () => {
   const para: string[] = [

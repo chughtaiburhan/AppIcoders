@@ -6,8 +6,8 @@ import {
   Check,
   Users, 
 } from 'lucide-react'; 
-import PcImage from "../../public/assets/pc-Img.svg"; 
-import ServicesBgImg from "../../public/services-bg.svg";  
+import PcImage from "../assets/pc-Img.svg"; 
+import ServicesBgImg from "../assets/services-bg.svg";  
  // --- Service Item Component ---
 interface ServiceItemProps {
   icon: React.FC<React.SVGProps<SVGSVGElement>>;

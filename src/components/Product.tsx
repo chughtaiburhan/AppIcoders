@@ -1,9 +1,11 @@
 import { useState } from 'react';
 
 // Using string paths for assets in the public folder to ensure proper runtime loading
-const vector1Path = "/assets/Vector1.svg";
-const vector2Path = "/assets/Vector2.svg";
-
+const vector1Path = "../assets/Vector1.svg";
+const vector2Path = "../assets/Vector2.svg";
+import product1 from "../assets/product1.svg";
+import product2 from "../assets/product2.svg";
+import product3 from "../assets/product3.svg"
 const productFilters = [
   'ALL', 
   'Health Supreme', 
@@ -15,12 +17,12 @@ const productFilters = [
 ];
 
 const productData = [
-  { id: 1, title: 'Health Supreme Dashboard', filter: 'Health Supreme', src: '/assets/product1.svg', description: 'Web/Dashboard View' },
-  { id: 2, title: 'E-Commerce Marketplace', filter: 'Marketplace E-Commerce Platform', src: '/assets/product2.svg', description: 'Tablet/Web View' },
-  { id: 3, title: 'Mobile App Wireframes', filter: 'Sports Training App', src: '/assets/product3.svg', description: 'Mobile App View' },
-  { id: 4, title: 'Best Trainings Web', filter: 'Fitness', src: '/assets/product1.svg', description: 'Web/Landing Page View' },
-  { id: 5, title: 'Health Supreme Mobile', filter: 'Health Supreme', src: '/assets/product3.svg', description: 'Mobile App View' },
-  { id: 6, title: 'Fitness Tracker Dashboard', filter: 'Fitness', src: '/assets/product2.svg', description: 'Dashboard/Web View' },
+  { id: 1, title: 'Health Supreme Dashboard', filter: 'Health Supreme', src: product1, description: 'Web/Dashboard View' },
+  { id: 2, title: 'E-Commerce Marketplace', filter: 'Marketplace E-Commerce Platform', src:product2, description: 'Tablet/Web View' },
+  { id: 3, title: 'Mobile App Wireframes', filter: 'Sports Training App', src: product2, description: 'Mobile App View' },
+  { id: 4, title: 'Best Trainings Web', filter: 'Fitness', src: product1, description: 'Web/Landing Page View' },
+  { id: 5, title: 'Health Supreme Mobile', filter: 'Health Supreme', src: product3, description: 'Mobile App View' },
+  { id: 6, title: 'Fitness Tracker Dashboard', filter: 'Fitness', src: product1, description: 'Dashboard/Web View' },
 ];
 
 const Product = () => {
