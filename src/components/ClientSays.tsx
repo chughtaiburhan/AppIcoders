@@ -10,11 +10,8 @@ const ClientSays: React.FC = () => {
       }}
     >
       <div className="max-w-7xl mx-auto bg-[#a8131ae6]  overflow-hidden">
-        <div className="grid grid-cols-1 md:grid-cols-2 h-full">
-          
-          {/* LEFT COLUMN: Title & Quote Icon */}
+        <div className="grid grid-cols-1 md:grid-cols-2 h-full"> 
           <div className="relative p-8 lg:p-16 text-white flex flex-col justify-between">
-            {/* Large White Quote Icon */}
             <div className="absolute top-12 left-12 sm:top-0 sm:left-0 -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-full flex items-center justify-center shadow-lg md:top-12 md:left-12">
               <span className="text-red-700 text-[6rem] sm:text-[8rem] md:text-[10rem] leading-none font-serif opacity-90 mt-16">“</span>
             </div>
@@ -30,10 +27,7 @@ const ClientSays: React.FC = () => {
 
             <div className="hidden md:block"></div>
           </div>
-
-          {/* RIGHT COLUMN: Testimonial Content */}
           <div className="bg-white p-6 sm:p-8 lg:p-12 text-black flex flex-col justify-center relative">
-            {/* User Info */}
             <div className="flex items-center space-x-4 mb-6">
               <img
                 src={ClientProfile}
@@ -45,8 +39,6 @@ const ClientSays: React.FC = () => {
                 <p className="text-xs sm:text-sm text-gray-500">CEO at AppEngine (Example Title)</p>
               </div>
             </div>
-
-            {/* Testimonial Text */}
             <p className="text-base sm:text-lg leading-relaxed mb-6 sm:mb-8">
               "Thank you, Team AppEngine, you guys have a great understanding of what's
               current, and get things done very quickly compared to others. Reliable
@@ -57,7 +49,6 @@ const ClientSays: React.FC = () => {
               for quality work."
             </p>
 
-            {/* Small red divider */}
             <div className="w-10 h-1 bg-red-700 self-end"></div>
           </div>
 

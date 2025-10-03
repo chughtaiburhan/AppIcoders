@@ -1,6 +1,4 @@
-import { useState } from 'react';
-
-// Using string paths for assets in the public folder to ensure proper runtime loading
+import { useState } from 'react'; 
 const vector1Path = "../assets/Vector1.svg";
 const vector2Path = "../assets/Vector2.svg";
 import product1 from "../assets/product1.svg";
@@ -46,8 +44,7 @@ const Product = () => {
         <h2 className="text-5xl font-extrabold text-white text-center mb-12">
           Products
         </h2> 
-        
-        {/* Filters Container: Uses overflow-x-auto for horizontal scrolling on small screens */}
+         
        <div className="flex flex-row gap-4 text-white text-lg font-medium mb-16 overflow-x-auto whitespace pb-2">
   {productFilters.map((filter, index) => (
     <button
@@ -65,10 +62,7 @@ const Product = () => {
       {filter}
     </button>
   ))}
-</div>
- 
-
-        {/* Product Cards Container: Mobile Carousel, Desktop Grid */}
+</div> 
         <div 
             className={`
                 flex gap-8 overflow-x-scroll overflow-y-hidden flex-nowrap 
@@ -96,9 +90,8 @@ const Product = () => {
                 src={product.src} 
                 alt={product.title} 
                 className="w-full h-auto object-cover" 
-              /> 
-              
-              {/* Product Info */}
+                loading='lazy'
+              />  
               <div 
                 className={`
                   p-4 transition duration-300 
@@ -107,9 +100,7 @@ const Product = () => {
               >
                   <h3 className="text-xl font-bold text-gray-800">{product.title}</h3>
                   <p className="text-red-600 font-semibold">{product.description}</p>
-              </div>
-
-              {/* Hover Detail Overlay */}
+              </div> 
               <div
                 className={`
                   absolute inset-0 bg-black/90 text-white p-6 z-10 

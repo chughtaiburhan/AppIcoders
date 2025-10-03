@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect, useCallback } from 'react';
 import type { FC } from 'react';
-// Define the interface for a single industry item to ensure type safety
 interface IndustryItem {
   id: number;
   icon: React.ReactElement;
@@ -8,7 +7,6 @@ interface IndustryItem {
   description: string;
 }
 
-// Data array using the defined interface
 const industryData: IndustryItem[] = [
   {
     id: 1,
@@ -54,7 +52,7 @@ const industryData: IndustryItem[] = [
     id: 5,
     icon: (
       <svg className="w-12 h-12 text-red-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.542 23.542 0 0112 15c-1.748 0-3.476-.234-5.145-.687m.002 12.019l-.974-2.857m-4.321-1.28l-.348-1.018a.633.633 0 01.3-.807l1.09-.646a2.636 2.636 0 001.3-.807l1.09-.646a.633.633 0 01.3-.807l1.09-.646a2.636 2.636 0 001.3-.807l1.09-.646a.633.633 0 01.3-.807l1.09-.646a2.636 2.636 0 001.3-.807l1.09-.646a.633.633 0 01.3-.807l1.09-.646a2.636 2.636 0 001.3-.807l1.09-.646a.633.633 0 01.3-.807l1.09-.646a2.636 2.636 0 001.3-.807l1.09-.646a.633.633 0 01.3-.807l.974-2.857m-4.321-1.28l-.348-1.018a.633.633 0 01.3-.807l1.09-.646a2.636 2.636 0 001.3-.807l1.09-.646a.633.633 0 01.3-.807l1.09-.646a2.636 2.636 0 001.3-.807l1.09-.646a.633.633 0 01.3-.807l1.09-.646a2.636 2.636 0 001.3-.807l1.09-.646a.633.633 0 01.3-.807l.974-2.857"></path>
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.542 23.542 0 0112 15c-1.748 0-3.476-.234-5.145-.687m.002 12.019l-.974-2.857m-4.321-1.28l-.348-1.018a.633.633 0 01.3-.807l1.09-.646a2.636 2.636 0 001.3-.807l1.09-.646a.633.633 0 01.3-.807l1.09-.646a2.636 2.636 0 001.3-.807l1.09-.646a.633.633 0 01.3-.807l1.09-.646a2.636 2.636 0 001.3-.807l1.09-.646a.633.633 0 01.3-.807l1.09-.646a2.636 2.636 0 001.3-.807l1.09-.646a.633.633 0 01.3-.807l.974-2.857m-4.321-1.28l-.348-1.018a.633.633 0 01.3-.807l1.09-.646a2.636 2.636 0 001.3-.807l1.09-.646a.633.633 0 01.3-.807l1.09-.646a2.636 2.636 0 001.3-.807l1.09-.646a.633.633 0 01.3-.807l1.09-.646a2.636 2.636 0 001.3-.807l1.09-.646a.633.633 0 01.3-.807l.974-2.857"></path>
       </svg>
     ),
     title: 'Business & Services',
@@ -72,19 +70,14 @@ const industryData: IndustryItem[] = [
   },
 ];
 
-// Use FC (Functional Component) for clarity
 const Industries: FC = () => {
-  // Ref for the scrollable container, typed as HTMLDivElement
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  // State for tracking the current slide index
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const totalSlides: number = industryData.length;
 
-  // Function to scroll the container
   const scrollToSlide = (index: number): void => {
     const container = scrollContainerRef.current;
     if (container) {
-      // Logic for calculating scroll position is unchanged
       const cardWidth = container.offsetWidth * 0.9166;
       const gap = 32;
       const scrollPosition = index * (cardWidth + gap);
@@ -97,7 +90,6 @@ const Industries: FC = () => {
     }
   };
 
-  // Navigation functions for buttons
   const goToNext = (): void => {
     const nextIndex = (currentSlide + 1);
     if (nextIndex < totalSlides) {
@@ -112,7 +104,6 @@ const Industries: FC = () => {
     }
   };
  
-// Wrap handleScroll
 const handleScroll = useCallback((): void => {
   const container = scrollContainerRef.current;
   if (container) {
@@ -128,13 +119,13 @@ const handleScroll = useCallback((): void => {
 }, [currentSlide, totalSlides]);
 
 
- useEffect(() => {
+  useEffect(() => {
   const container = scrollContainerRef.current;
   if (container) {
     container.addEventListener('scroll', handleScroll);
     return () => container.removeEventListener('scroll', handleScroll);
   }
-}, [handleScroll]); // ✅ Safe now
+}, [handleScroll]);
 
   return (
     <section className="py-16 bg-[#eaedef] relative">
@@ -144,7 +135,6 @@ const handleScroll = useCallback((): void => {
         </h2>
 
         <div className="relative">
-          {/* Previous Button - visible only on small screens */}
           <button 
             onClick={goToPrev}
             className="hidden sm:block md:hidden absolute left-0 top-1/2 -mt-6 z-30 p-2 bg-red-600 text-white rounded-full shadow-lg transform -translate-x-1/2 hover:bg-red-700 disabled:opacity-50 transition"
@@ -154,7 +144,6 @@ const handleScroll = useCallback((): void => {
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path></svg>
           </button>
           
-          {/* Next Button - visible only on small screens */}
           <button 
             onClick={goToNext}
             className="hidden sm:block md:hidden absolute right-0 top-1/2 -mt-6 z-30 p-2 bg-red-600 text-white rounded-full shadow-lg transform translate-x-1/2 hover:bg-red-700 disabled:opacity-50 transition"
@@ -164,24 +153,21 @@ const handleScroll = useCallback((): void => {
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
           </button>
 
-          {/* Industries Grid/Carousel Container */}
           <div 
             ref={scrollContainerRef}
             className="
               flex overflow-x-scroll snap-x snap-mandatory scroll-smooth 
               md:grid md:grid-cols-2 lg:grid-cols-3 
               gap-8 pb-4 px-6 sm:py-5 -mx-4 sm:-mx-6 md:mx-0
-              scrollbar-hide // Hides scrollbar on compatible browsers
+              scrollbar-hide 
             "
           >
-            {/* Custom CSS to hide scrollbar in browsers that don't support tailwind's utility */}
-            {/* REMOVED: jsx="true" to fix TypeScript error */}
             <style>{`
               .scrollbar-hide::-webkit-scrollbar {
                 display: none;
               }
               .scrollbar-hide {
-                -ms-overflow-style: none; /* IE and Edge */
+                -ms-overflow-style: none;
                 scrollbar-width: none;  
               }
             `}</style>
@@ -192,8 +178,8 @@ const handleScroll = useCallback((): void => {
                 className={`
                   bg-white p-6 sm:p-8 rounded-lg shadow-md flex flex-col items-start 
                   transform transition duration-300 hover:scale-[1.02] hover:shadow-lg
-                   flex-shrink-0 w-11/12 sm:w-[calc(50%-16px)] 
-                  snap-center  
+                  flex-shrink-0 w-11/12 sm:w-[calc(50%-16px)] 
+                  snap-center 
                   md:w-auto md:flex-shrink 
                   ${index === 1 || index === 4 ? 'border-b-4 border-red-600' : ''} 
                 `}
@@ -211,7 +197,6 @@ const handleScroll = useCallback((): void => {
             ))}
           </div>
 
-          {/* Pagination Dots - visible only on mobile/sm for visual feedback */}
           <div className="flex justify-center mt-6 space-x-2 md:hidden">
             {industryData.map((_, index: number) => (
               <button

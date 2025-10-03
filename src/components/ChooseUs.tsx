@@ -8,8 +8,7 @@ interface ChooseUsItem {
   color: string;
 }
 
-const ChooseUs: React.FC = () => {
-  // Wrap the array in useMemo so it's stable between renders
+const ChooseUs: React.FC = () => { 
   const chooseUs: ChooseUsItem[] = useMemo(() => [
     {
       icon: Briefcase,
@@ -45,8 +44,7 @@ const ChooseUs: React.FC = () => {
 
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
-  // useCallback functions now have stable dependencies
-  const handleNext = useCallback(() => {
+   const handleNext = useCallback(() => {
     setActiveIndex((prev) => (prev + 1) % chooseUs.length);
   }, [chooseUs.length]);
 
@@ -63,12 +61,11 @@ const ChooseUs: React.FC = () => {
     [activeIndex, chooseUs]
   );
 
-  const positions = [-1, 0, 1]; // left, center, right
+  const positions = [-1, 0, 1];
 
   return (
     <div className="bg-[#eaedef] py-16 text-gray-800 z-80">
       <div className="container mx-auto px-4 max-w-6xl">
-        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
             Why Choose Us?
@@ -78,9 +75,7 @@ const ChooseUs: React.FC = () => {
           </p>
         </div>
 
-        {/* Carousel */}
         <div className="relative flex justify-center items-center min-h-[350px]">
-          {/* Prev Button */}
           <button
             onClick={handlePrev}
             className="absolute left-0 md:-left-12 lg:-left-16 p-3 rounded-full bg-white shadow-lg hover:bg-gray-100 transition-colors z-20 focus:outline-none"
@@ -89,7 +84,6 @@ const ChooseUs: React.FC = () => {
           <MoveLeftIcon className="cursor-pointer h-4 w-4 sm:h-6 sm:w-6" />
           </button>
 
-          {/* Cards */}
           <div className="flex justify-center gap-4 md:gap-8 w-full">
             {positions.map((offset, idx) => {
               const item = getItem(offset);
@@ -107,7 +101,6 @@ return (
         }
       `}
     >
-      {/* Icon */}
       <div
         className={`
           w-20 h-20 rounded-full flex items-center justify-center mb-6 
@@ -118,12 +111,10 @@ return (
         <item.icon className="w-10 h-10" />
       </div>
 
-      {/* Title */}
       <h3 className={`text-xl font-bold mb-3 ${isCenter ? "text-black" : "text-gray-400"}`}>
         {item.title}
       </h3>
 
-      {/* Description */}
       <p className={`text-sm px-4 ${isCenter ? "text-black" : "text-gray-400"}`}>
         {item.desc}
       </p>
@@ -132,7 +123,6 @@ return (
             })}
           </div>
 
-          {/* Next Button */}
           <button
             onClick={handleNext}
             className="absolute right-0 md:-right-12 lg:-right-16 p-3 rounded-full bg-white shadow-lg hover:bg-gray-100 transition-colors z-20 focus:outline-none"

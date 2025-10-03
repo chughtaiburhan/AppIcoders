@@ -112,6 +112,7 @@ const Awards = () => {
                                 <img
                                     src={award.logoSrc} 
                                     alt={award.logoAlt}
+                                    loading="lazy"
                                     className={`
                                         w-full h-full object-contain 
                                         ${award.isFeatured ? 'p-6 rounded-full' : ''}

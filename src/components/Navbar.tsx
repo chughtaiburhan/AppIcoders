@@ -29,12 +29,10 @@ const Navbar: React.FC = () => {
 >
 
       <div className="max-w-screen-xl mx-auto flex items-center justify-between p-4">
-        {/* Logo */}
         <a href="/" className="flex items-center space-x-3">
           <img src={Logo} alt="Logo" width={200} height={100} /> 
         </a>
 
-        {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6 font-medium text-white">
           {navItems.map((item) => (
             <li key={item.name}>
@@ -50,7 +48,6 @@ const Navbar: React.FC = () => {
           ))}
         </ul>
 
-        {/* Mobile Toggle */}
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -62,7 +59,6 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -70,7 +66,7 @@ const Navbar: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden  backdrop-blur-md w-full border-t border-red-600 shadow-lg"
+            className="md:hidden backdrop-blur-md w-full border-t border-red-600 shadow-lg"
           >
             <ul className="flex flex-col px-4 py-6 space-y-4 text-white font-medium">
               {navItems.map((item) => (

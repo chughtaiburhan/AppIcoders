@@ -34,13 +34,12 @@ const Technologies = () => {
               src={TechImg}
               alt="Cloud Solutions Technology"
                className="w-full h-auto object-cover " 
+               loading="lazy"
             />
           </div>
 
         </div>
-      </div>
-      
-      {/* Optional: Bottom red border effect */}
+      </div> 
       <div className="absolute bottom-0 left-0 w-full h-4 bg-red-600 z-0"></div>
     </section>
   );
