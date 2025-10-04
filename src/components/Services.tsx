@@ -27,7 +27,7 @@ const Services: React.FC = () => {
     <> 
 
     <div className="relative z-20 overflow-hidden polygon-shape-bottom"> 
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 border-none">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1410 310">
           <path fill="white" fillOpacity="1" d="M0,224L1420,64L1440,0L0,0Z"></path>
         </svg> 
@@ -49,7 +49,7 @@ const Services: React.FC = () => {
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   </p>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-x-12 ">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-x-12 ">
     <ServiceItem icon={Monitor} title="Web & Mobile Application" />
     <ServiceItem icon={Settings} title="Software & QA Support" />
     <ServiceItem icon={Phone} title="POS & ERP Solutions" />
@@ -65,7 +65,7 @@ const Services: React.FC = () => {
                <img 
                   src={PcImage} 
                   alt="Desktop Computer Mockup" 
-                  className=' -mt-40 ml-0 sm:mt-0 sm:ml-10 '
+                  className=' -mt-20 ml-0 sm:mt-0 sm:ml-10 '
                   loading="lazy"
                 />
               </div>

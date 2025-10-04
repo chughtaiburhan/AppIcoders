@@ -78,10 +78,10 @@ const ChooseUs: React.FC = () => {
         <div className="relative flex justify-center items-center min-h-[350px]">
           <button
             onClick={handlePrev}
-            className="absolute left-0 md:-left-12 lg:-left-16 p-3 rounded-full bg-white shadow-lg hover:bg-gray-100 transition-colors z-20 focus:outline-none"
+            className="absolute left-0 md:-left-12 lg:-left-16 p-2 sm:p-3 rounded-full bg-white shadow-lg hover:bg-gray-100 transition-colors z-20 focus:outline-none"
             aria-label="Previous item"
           > 
-          <MoveLeftIcon className="cursor-pointer h-4 w-4 sm:h-6 sm:w-6" />
+          <MoveLeftIcon className="cursor-pointer h-3 w-3 sm:h-6 sm:w-6" />
           </button>
 
           <div className="flex justify-center gap-4 md:gap-8 w-full">
@@ -105,7 +105,7 @@ return (
         className={`
           w-20 h-20 rounded-full flex items-center justify-center mb-6 
           transition-colors duration-500
-          ${isCenter ? "text-red-500 bg-red-100" : "text-gray-400 bg-gray-200"}
+          ${isCenter ? "text-red-500 " : "text-gray-400 bg-gray-200"}
         `}
       >
         <item.icon className="w-10 h-10" />
@@ -125,10 +125,10 @@ return (
 
           <button
             onClick={handleNext}
-            className="absolute right-0 md:-right-12 lg:-right-16 p-3 rounded-full bg-white shadow-lg hover:bg-gray-100 transition-colors z-20 focus:outline-none"
+            className="absolute right-0 md:-right-12 lg:-right-16 p-2 sm:p-3 rounded-full bg-white shadow-lg hover:bg-gray-100 transition-colors z-20 focus:outline-none"
             aria-label="Next item"
           > 
-          <MoveRightIcon className="cursor-pointer h-4 w-4 sm:h-6 sm:w-6" />
+          <MoveRightIcon className="cursor-pointer h-3 w-3 sm:h-6 sm:w-6" />
           </button>
         </div>
       </div>

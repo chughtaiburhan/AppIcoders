@@ -69,9 +69,8 @@ const Awards = () => {
                 </h5> 
                 <div 
                     className={`
-                        flex items-start gap-12 md:gap-16 
-                        
-                        // CAROUSEL CLASSES (DEFAULT: MOBILE)
+                        flex items-start gap-12
+                         
                         overflow-x-scroll overflow-y-hidden // Enable horizontal scrolling
                         flex-nowrap // Force items onto one line
                         justify-start // Start at the beginning
@@ -80,7 +79,7 @@ const Awards = () => {
                         // Add 'scrollbar-hide' here if you use a plugin
 
                         // GRID CLASSES (SM AND UP: OVERRIDE)
-                        sm:flex-wrap sm:justify-center // Switch back to wrapping and centering
+                        sm:justify-center // Switch back to wrapping and centering
                         sm:overflow-x-visible sm:overflow-y-visible // Disable scrolling
                         sm:snap-none // Disable snapping
                     `}
@@ -96,8 +95,8 @@ const Awards = () => {
                                  
                                 sm:flex-shrink sm:w-auto // Allow shrinking on larger screens
                                 ${award.isFeatured
-                                    ? 'w-60 md:w-64 lg:w-72 mt-0 md:-mt-8 scale-110 shadow-xl rounded-full' 
-                                    : 'w-48 md:w-56 lg:w-60 mt-12 md:mt-0 hover:scale-105' 
+                                    ? 'w-48 md:w-52 lg:w-56 mt-0 md:-mt-8 scale-101 shadow-xl rounded-full' 
+                                    : 'w-48 md:w-52 lg:w-56 mt-12 md:mt-0 hover:scale-105' 
                                 }
                             `}
                         > 
@@ -115,7 +114,7 @@ const Awards = () => {
                                     loading="lazy"
                                     className={`
                                         w-full h-full object-contain 
-                                        ${award.isFeatured ? 'p-6 rounded-full' : ''}
+                                        ${award.isFeatured ? 'p-4 rounded-full' : ''}
                                     `}
                                 />
  

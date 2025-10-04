@@ -75,7 +75,7 @@ Caviar - Order Food Delivery
           <p className='text-white text-base sm:text-lg md:text-xl leading-relaxed'>
             Experience the fastest and most reliable food delivery service with our app. Order from your favorite restaurants and enjoy delicious meals delivered straight to your door.
           </p>
-          <div className='flex flex-wrap gap-4 mt-2'>
+          <div className='flex flex-nowrap gap-4 mt-2'>
             <img 
               src={AppstoreImg} 
               alt="Download on the App Store" 
